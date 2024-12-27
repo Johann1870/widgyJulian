@@ -6,8 +6,8 @@ var main = function () {
   }
 
   var today = new Date(); //set any date
-  var julian = today.getJulianUTC().toLocaleString('en-GB', {minimumFractionDigits:3, maximumFractionDigits:5}); //get Julian counterpart
+  var julian = today.getJulianUTC(); //get Julian counterpart
 
 
-  return julian;
+  return julian.toFixed(2);
 }
