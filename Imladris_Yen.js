@@ -244,6 +244,6 @@ var main = function() {
 
     debug = "<br>" + eldarian + "<br>" + 'Neldien: ' + Neldien + ',  dayNeldien: ' + dayNeldien + ',  loarastaNeldien: ' + loarastaNeldien + ',  dayLoarasta: ' + dayLoarasta + "<br>Loa of the Loarasta: " + loaLoarasta + ',  Loa: ' + Loa + ',  leapLoa: ' + leapLoa + ',  Yen: ' + Yen + ',  hollowYen: ' + hollowYen + ',  loaYen: ' + loaYen + "<br>dayLoa: " + dayLoa + ", LoastaNumber: " + LoastaNumber + ', Loasta name: ' + monthsQuenya[LoastaNumber0b] + ' / ' + monthsSindarin[LoastaNumber0b] + ", dayLoasta: " + dayLoasta + ', intDayLoasta: ' + intDayLoasta + ', dayEnquie: ' + dayEnquie + ', day of Week (Enquië): ' + daysQuenya[dayEnquie] + ' / ' + daysSindarin[dayEnquie] + ', day number of Enquië: ' + dayNumEnquie;
 
-    return 'Yen: '+ Yen;
+    return 'Yén: '+ Yen;
     /*return resultSindarin;*/
   }
