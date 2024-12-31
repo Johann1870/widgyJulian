@@ -214,7 +214,8 @@ var main = function() {
     }
 
     //The day number of the week (Enquië)
-    dayEnquie = Math.trunc(((eldarian - 1) % 6) + 1);
+    dayNumEnquie = Math.trunc(((eldarian - 1) % 6) + 1);
+    dayEnquie = Math.trunc(eldarian % 6);
 
     //Integer day of Loasta
     intDayLoasta = Math.trunc(dayLoasta);
@@ -226,14 +227,23 @@ var main = function() {
     romYen = romanize(Yen);
 
     //month
-    months = new Array('Yestarë', 'Tuilë', 'Lairë', 'Yávië', 'Enderi', 'Quellë', 'Hrívë', 'Coirë', 'Mettarë')
+    monthsQuenya = new Array('Yestarë', 'Tuilë', 'Lairë', 'Yávië', 'Enderi', 'Quellë', 'Hrívë', 'Coirë', 'Mettarë')
+
+    monthsSindarin = new Array('Yestarë', 'Ethuil', 'Laer', 'Iavas', 'Enderi', 'Firith', 'Rhîw', 'Echuir', 'Mettarë')
 
     //day of week (Enquië)
-    days = new Array('Valanya', 'Elenya', 'Anarya', 'Isilya', 'Aldúya', 'Menelya')
+    daysQuenya = new Array('Valanya', 'Elenya', 'Anarya', 'Isilya', 'Aldúya', 'Menelya')
 
-    result = days[dayEnquie] + ', ' + intDayLoasta + ' ' + months[LoastaNumber0b] + ' ' + loaYen + ' ' + romYen + ', (' + Loa + ')'
+    daysSindarin = new Array('Orbelain', 'Orgilion', 'Oranor', 'Orithil', 'Orgaladhad', 'Ormenel')
 
-    debug = "<br>" + eldarian + "<br>" + 'Neldien: ' + Neldien + ',  dayNeldien: ' + dayNeldien + ',  loarastaNeldien: ' + loarastaNeldien + ',  dayLoarasta: ' + dayLoarasta + "<br>Loa of the Loarasta: " + loaLoarasta + ',  Loa: ' + Loa + ',  leapLoa: ' + leapLoa + ',  Yen: ' + Yen + ',  hollowYen: ' + hollowYen + ',  loaYen: ' + loaYen + "<br>dayLoa: " + dayLoa + ", LoastaNumber: " + LoastaNumber + ", dayLoasta: " + dayLoasta + ", dayEnquie: " + dayEnquie;
 
-    return result;
+    resultQuenya = daysQuenya[dayEnquie] + ', ' + intDayLoasta + ' ' + monthsQuenya[LoastaNumber0b] + ' ' + loaYen + ' ' + romYen + ', (' + Loa + ')';
+
+    resultSindarin = daysSindarin[dayEnquie] + ', ' + intDayLoasta + ' ' + monthsSindarin[LoastaNumber0b] + ' ' + loaYen + ' ' + romYen + ', (' + Loa + ')';
+
+
+    debug = "<br>" + eldarian + "<br>" + 'Neldien: ' + Neldien + ',  dayNeldien: ' + dayNeldien + ',  loarastaNeldien: ' + loarastaNeldien + ',  dayLoarasta: ' + dayLoarasta + "<br>Loa of the Loarasta: " + loaLoarasta + ',  Loa: ' + Loa + ',  leapLoa: ' + leapLoa + ',  Yen: ' + Yen + ',  hollowYen: ' + hollowYen + ',  loaYen: ' + loaYen + "<br>dayLoa: " + dayLoa + ", LoastaNumber: " + LoastaNumber + ', Loasta name: ' + monthsQuenya[LoastaNumber0b] + ' / ' + monthsSindarin[LoastaNumber0b] + ", dayLoasta: " + dayLoasta + ', intDayLoasta: ' + intDayLoasta + ', dayEnquie: ' + dayEnquie + ', day of Week: ' + daysQuenya[dayEnquie] + ' / ' + daysSindarin[dayEnquie] + ', day number of Enquie: ' + dayNumEnquie;
+
+    return resultQuenya;
+    /*return resultSindarin;*/
   }
