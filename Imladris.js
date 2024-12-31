@@ -23,7 +23,9 @@ var main = function() {
     var today = new Date(); //set any date
 
     //Eldarian Day Number from Julian Day Number
-    var eldarian = today.getJulianUTC() + 2316981.5;
+    var eldarianUTC = today.getJulianUTC() + 2316981.5;
+
+    var eldarian = eldarianUTC - (today.getTimezoneOffset()/1440)+0.25; //converts to local time, and adjusts the day number to start at 6pm (roughly sunset).
 
     //Neldien - The three yén cycle of the elvish calendar. The leap loa is skipped
     //   in the final year (year 432 of the cycle) Neldien is Quenya for three yén.
